@@ -9,7 +9,7 @@ if [ "${TRAVIS_BRANCH}" = "main" ]; then
     dotnet restore src
     dotnet pack -c release src
 
-    for package in ./src/**/bin/release/*.nupkg; do
+    for package in ./src/bin/release/*.nupkg; do
       dotnet nuget push "$package" --api-key $NUGET_API_KEY --source https://www.nuget.org/api/v2/package --skip-duplicate
     done
 

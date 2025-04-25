@@ -1,5 +1,5 @@
 #!/bin/bash
-set -v
+set -e
 
 if [ "${TRAVIS_BRANCH}" = "main" ]; then
   if [ "${TRAVIS_PULL_REQUEST}" = "false" ]; then

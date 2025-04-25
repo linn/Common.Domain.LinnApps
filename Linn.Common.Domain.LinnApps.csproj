@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<Authors>Linn</Authors>
 		<TargetFramework>net9.0</TargetFramework>
@@ -6,7 +6,4 @@
 		<PackageId>Linn.Common.Domain.Linnapps</PackageId>
 		<Version>2.0.0</Version>
   </PropertyGroup>
-	<ItemGroup>
-	  <Folder Include="Services\" />
-	</ItemGroup>
 </Project>

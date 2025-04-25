@@ -7,11 +7,14 @@ if [ "${TRAVIS_BRANCH}" = "main" ]; then
     echo Starting publish...
 
     dotnet restore src
-    dotnet pack -c release src
+    dotnet pack -c Release src
 
-    for package in ./src/bin/release/*.nupkg; do
-      dotnet nuget push "$package" --api-key $NUGET_API_KEY --source https://www.nuget.org/api/v2/package --skip-duplicate
-    done
+    PACKAGE_PATH=src/bin/Release/Linn.Common.Domain.Linnapps.2.0.0.nupkg
+
+    dotnet nuget push "$PACKAGE_PATH" \
+      --api-key "$NUGET_API_KEY" \
+      --source https://www.nuget.org/api/v2/package \
+      --skip-duplicate
 
     echo ...done publishing
   else

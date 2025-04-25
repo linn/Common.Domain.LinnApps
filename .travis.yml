@@ -3,6 +3,6 @@ dist: focal
 sudo: required
 mono: none
 dotnet: 9.0
-before_install: 
+before_script: 
 - chmod +x ./Scripts/*.sh
 script: ./Scripts/publish.sh
